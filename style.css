@@ -1,0 +1,38 @@
+html {
+    background-color: black;
+    color: white;
+    font-family: "Courier New", "Lucida Console", monospace;
+}
+
+textarea {
+    resize: none;
+    background-color: black;
+    color: rgb(79, 158, 60);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#workspace {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#editorDiv, #consoleDiv {
+    flex: 1;
+    min-width: 810px;
+}
+
+#runBtDiv {
+    margin-top: 20px;
+}
+
+#editor, #console {
+    width: 800px;
+    height: 600px;
+}
