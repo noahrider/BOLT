@@ -3,35 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOLT!</title>
+    <title>BOLT</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- https://docs.google.com/document/d/1FQcvsH-YznhsLWBmhXWzy0BGCyPi7Z5VWXegQOcA_GQ/ -->
-    <div class="header">
-        <img src="/assets/logo1.png" alt="BOLT!">
-        <p>
-            Bolt is a simple programming language aimed at teaching anyone how to program. <br>
-            While it can't preform tasks like a language like C++ can, it's still a very
-            simple learning tool for beginners.
-        </p>
-    </div>
     <div id="container">
+        <div class="header">
+            <img src="/assets/logo1.png" alt="IMAGE :: BOLT LOGO">
+            <p>
+                Bolt is a simple programming language aimed at teaching anyone how to program. <br>
+                While it can't preform tasks like a language like C++ can, it's still a very
+                simple learning tool for beginners. <br>
+                Hopefully, this tool can be used to teach novice programmers how to
+                think critically, and eventually help them learn deeper programming concepts.
+            </p>
+        </div>
         <div id="workspace">
             <div id="editorDiv">
                 <textarea id="editor" placeholder="Edit your code here!"></textarea>
             </div>
             <div id="consoleDiv">
-                <textarea id="console" placeholder="Output" readonly></textarea>
+                <textarea id="console" placeholder="The output will show up here!" readonly></textarea>
             </div>
         </div>
         <div id="runBtDiv">
-            <button id="runButton">Run!</button>
+            <button id="runButton">Run Program</button>
         </div>
-    </div>
-    <div class="footer">
-        <p>(c) 2025 Noah Rider.</p>
-        <p><a href="https://github.com/noahrider/BOLT">GitHub Repository</a></p>
+        <div class="footer">
+            <p>(c) 2025 Noah Rider.</p>
+            <p><a href="https://github.com/noahrider/BOLT">GitHub Repository</a></p>
+        </div>
     </div>
 </body>
 <script src="/scripts/main.js"></script>

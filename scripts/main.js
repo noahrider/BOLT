@@ -16,7 +16,6 @@ function error(message) {
 */
 function interpret() {
     try {
-        if (lineIndex >= lines.length) return;
         const console = document.getElementById('console');
         console.value = '';
         const code = document.getElementById('editor').value;
@@ -28,8 +27,8 @@ function interpret() {
         const lines = code.split('\n');
         if (DEBUG) {
             print("BOLT " + VERSION);
-            print("lines: " + lines.length);
-            print("");
+            print("Beginning program..");
+            print("-==-==-==-==-==-==-");
         }
 
 
@@ -38,24 +37,31 @@ function interpret() {
             const myLineNum = part[0];
             const command = part[1];
             let variable = {};
-            switch(command) {
+            let varCount = 0;
+            switch(command.toUpperCase()) {
                 case "//": //comment (hey look i just fucking used one)
                     break;
                 case "PRINT":
-                    print(part[2]);
+                    let message = part[2];
+                    if (message && message.startsWith('"')) {
+                    const fullLine = lines[i].trim();
+                    const quoteStart = fullLine.indexOf('"');
+                    const quoteEnd = fullLine.indexOf('"', quoteStart + 1);
+
+                    if (quoteEnd !== -1) {
+                        message = fullLine.substring(quoteStart + 1, quoteEnd);
+                    }
+                    }
+                    print(message);
                     break;
                 case "GOTO":
-                    const targetLine = part[2];
-                    for (let j = 0; j < lines.length; j++) {
-                        const checkParts = lines[j].trim().split(' ');
-                        if (checkParts[0] === targetLine) {
-                            setTimeout(() => interpret(), 100)
-                            break;
-                        }
-                    }
+                    //eee
                     break;
                 case "LET":
-                    
+                    const varName = part[2];
+                    const equalz = part[3];
+                    variable[varCount] = part[4];
+                    varCount++;
                     break;
                 case "IF":
                     
@@ -70,7 +76,7 @@ function interpret() {
                     
                     break;
                 default:
-                    error('Command not found:' + command);
+                    error('Command not found: ' + command);
                     break;
             }
         }
