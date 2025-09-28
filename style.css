@@ -4,10 +4,23 @@ html {
     font-family: "Courier New", "Lucida Console", monospace;
 }
 
+#header, #footer {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 226, 196);
+}
+a:hover {
+    text-decoration: 1px underline dashed;
+    color: rgb(92, 255, 233);
+}
+
 textarea {
     resize: none;
     background-color: black;
-    color: rgb(79, 158, 60);
+    color: rgb(136, 255, 106);
 }
 
 #container {

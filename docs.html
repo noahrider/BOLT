@@ -4,8 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOLT - Documentation</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .cmdBox {
+            border: 2px solid gray;
+            border-radius: 2px;
+            text-align: center;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="container">
+        <div id="header">
+            <img src="/assets/logo1.png" alt="IMAGE :: BOLT LOGO">
+            <h1>DOCUMENTATION</h1>
+            <p>
+                My goal for BOLT is to have a simple, easy to use and learn
+                language that anyone can pick up almost instantly. <br>
+                It can't do much, but it's very good for learning. <br>
+                To keep the 'easy to use and learn' aspect of this afloat,
+                I try and keep a list of all commands updated and
+                avaiable for anyone to look at, and see what a command does. <br>
+                Hope this helps!
+            </p>
+        </div>
+        <div id="commandList">
+            <div class="cmdBox">
+                <h2>PRINT</h2>
+                <h3>Usage: PRINT "[message]"</h3>
+                <p>A simple command that outputs a message to the console.</p>
+            </div>
+            <div class="cmdBox">
+                <h2>GOTO</h2>
+                <h3>Usage: GOTO [lineNo]</h3>
+                <p>Stop executing the program to go to a specific line number.</p>
+            </div>
+            <div class="cmdBox">
+                <h2>LET</h2>
+                <h3>Usage: LET [variableName] = [value]</h3>
+                <p>
+                    Initalize a variable, and set it to a value. <br>
+                    (Personally, I would suggest keeping the
+                    names as short as possible!)
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
